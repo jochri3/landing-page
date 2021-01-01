@@ -1,0 +1,222 @@
+$linearGradientStartColor: rgba(0, 0, 0, 0.801);
+$linearGradientEndColor: rgba(230, 93, 29, 0.698);
+$titleColor: #fff;
+$borderRadius: 2rem;
+$borderStyle: solid;
+$buttonBorderColor: black;
+$borderSize: 1px;
+$buttonTopBottomPadding: 2rem;
+$buttonRightLeftPadding: 2rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //10px
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+// Reusable animation function for text animation
+@mixin RightLeftAnimation($direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateX(if($direction== "right", -10rem, 10rem));
+      -webkit-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -moz-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -ms-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -o-transform: translateX(if($direction== "right", -10rem, 10rem));
+    }
+
+    90% {
+      opacity: 1;
+      transform: translateX(if($direction== "right", 1rem, -1rem));
+      -webkit-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -moz-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -ms-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -o-transform: translateX(if($direction== "right", 1rem, -1rem));
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+  }
+}
+
+//Reusable up down button animation
+@mixin buttonTopBottom($direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -webkit-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -moz-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -ms-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -o-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+  }
+}
+
+.header {
+  width: 100vw;
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  background-image: linear-gradient(
+      to left,
+      $linearGradientStartColor,
+      $linearGradientEndColor
+    ),
+    url("../img/header-bg.jpg");
+  background-size: cover;
+  position: relative;
+
+  &__logo {
+    width: 13rem;
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    color: $titleColor;
+    margin-bottom: 2rem;
+
+    &--main,
+    &--secondary {
+      display: block;
+    }
+
+    &--secondary {
+      font-size: 3rem;
+    }
+
+    &--main {
+      animation: moveToRight 1s linear;
+      -webkit-animation: moveToRight 1s linear;
+    }
+
+    &--secondary {
+      animation: moveToLeft 1s linear;
+      -webkit-animation: moveToLeft 1s linear;
+    }
+  }
+}
+
+// Executing mixin
+@include RightLeftAnimation("right", moveToRight);
+@include RightLeftAnimation("left", moveToLeft);
+
+.btn {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  color: $buttonBorderColor;
+  border: $borderSize $borderStyle $titleColor;
+  border-radius: $borderRadius;
+  -webkit-border-radius: $borderRadius;
+  -moz-border-radius: $borderRadius;
+  -ms-border-radius: $borderRadius;
+  -o-border-radius: $borderRadius;
+  padding: $buttonTopBottomPadding $buttonRightLeftPadding;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  animation: moveToTop 1s linear;
+  -webkit-animation: moveToTop 1s linear;
+  &:link {
+    text-decoration: none;
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &:hover {
+    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+    -moz-transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
+    -o-transform: translateY(-15%);
+    &::after {
+      transform: scaleX(1.6) scaleY(1.5);
+      -webkit-transform: scaleX(1.6) scaleY(1.5);
+      -moz-transform: scaleX(1.6) scaleY(1.5);
+      -ms-transform: scaleX(1.6) scaleY(1.5);
+      -o-transform: scaleX(1.6) scaleY(1.5);
+      opacity: 0;
+}
+  }
+
+  &:active {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    width: 100%;
+    height: 100%;
+    padding: $buttonTopBottomPadding $buttonRightLeftPadding;
+    border-radius: $borderRadius;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    z-index: -1;
+}
+}
+
+@include buttonTopBottom("to_bottom", moveToTop);

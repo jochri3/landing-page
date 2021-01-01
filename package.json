@@ -1,0 +1,12 @@
+{
+  "name": "4_remake",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass ./src/sass/main.scss ./public/css/style.css -w"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
