@@ -1,0 +1,35 @@
+.header {
+  width: 100vw;
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  background-image: linear-gradient(
+      to left,
+      $linearGradientStartColor,
+      $linearGradientEndColor
+    ),
+    url("../img/header-bg.jpg");
+  background-size: cover;
+  position: relative;
+
+  &__logo {
+    width: 13rem;
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

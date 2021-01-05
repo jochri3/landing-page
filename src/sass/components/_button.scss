@@ -1,0 +1,71 @@
+.btn {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  color: $buttonBorderColor;
+  border: $borderSize $borderStyle $titleColor;
+  border-radius: $borderRadius;
+  -webkit-border-radius: $borderRadius;
+  -moz-border-radius: $borderRadius;
+  -ms-border-radius: $borderRadius;
+  -o-border-radius: $borderRadius;
+  padding: $buttonTopBottomPadding $buttonRightLeftPadding;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  animation: moveToTop 1s linear;
+  -webkit-animation: moveToTop 1s linear;
+  &:link {
+    text-decoration: none;
+  }
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &:hover {
+    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+    -moz-transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
+    -o-transform: translateY(-15%);
+    &::after {
+      transform: scaleX(1.6) scaleY(1.5);
+      -webkit-transform: scaleX(1.6) scaleY(1.5);
+      -moz-transform: scaleX(1.6) scaleY(1.5);
+      -ms-transform: scaleX(1.6) scaleY(1.5);
+      -o-transform: scaleX(1.6) scaleY(1.5);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: $buttonTopBottomPadding $buttonRightLeftPadding;
+    border-radius: $borderRadius;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,54 @@
+// Reusable animation function for text animation
+@mixin RightLeftAnimation($direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateX(if($direction== "right", -10rem, 10rem));
+      -webkit-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -moz-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -ms-transform: translateX(if($direction== "right", -10rem, 10rem));
+      -o-transform: translateX(if($direction== "right", -10rem, 10rem));
+    }
+
+    90% {
+      opacity: 1;
+      transform: translateX(if($direction== "right", 1rem, -1rem));
+      -webkit-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -moz-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -ms-transform: translateX(if($direction== "right", 1rem, -1rem));
+      -o-transform: translateX(if($direction== "right", 1rem, -1rem));
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+  }
+}
+
+//Reusable up down button animation
+@mixin buttonTopBottom($direction, $name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
+      transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -webkit-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -moz-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -ms-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+      -o-transform: translateY(if($direction== "to_top", -10rem, 10rem));
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  &__title {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    color: $titleColor;
+    margin-bottom: 2rem;
+
+    &--main,
+    &--secondary {
+      display: block;
+    }
+
+    &--secondary {
+      font-size: 3rem;
+    }
+
+    &--main {
+      animation: moveToRight 1s linear;
+      -webkit-animation: moveToRight 1s linear;
+    }
+
+    &--secondary {
+      animation: moveToLeft 1s linear;
+      -webkit-animation: moveToLeft 1s linear;
+    }
+  }
+}

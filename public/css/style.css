@@ -9,9 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  font-weight: 400; }
+  box-sizing: border-box; }
 
 .header {
   width: 100vw;
@@ -36,67 +34,6 @@ body {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     text-align: center; }
-  .header__title {
-    font-size: 4rem;
-    letter-spacing: 0.8rem;
-    color: #fff;
-    margin-bottom: 2rem; }
-    .header__title--main, .header__title--secondary {
-      display: block; }
-    .header__title--secondary {
-      font-size: 3rem; }
-    .header__title--main {
-      animation: moveToRight 1s linear;
-      -webkit-animation: moveToRight 1s linear; }
-    .header__title--secondary {
-      animation: moveToLeft 1s linear;
-      -webkit-animation: moveToLeft 1s linear; }
-
-@keyframes moveToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-    -webkit-transform: translateX(-10rem);
-    -moz-transform: translateX(-10rem);
-    -ms-transform: translateX(-10rem);
-    -o-transform: translateX(-10rem); }
-  90% {
-    opacity: 1;
-    transform: translateX(1rem);
-    -webkit-transform: translateX(1rem);
-    -moz-transform: translateX(1rem);
-    -ms-transform: translateX(1rem);
-    -o-transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0); } }
-
-@keyframes moveToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-    -webkit-transform: translateX(10rem);
-    -moz-transform: translateX(10rem);
-    -ms-transform: translateX(10rem);
-    -o-transform: translateX(10rem); }
-  90% {
-    opacity: 1;
-    transform: translateX(-1rem);
-    -webkit-transform: translateX(-1rem);
-    -moz-transform: translateX(-1rem);
-    -ms-transform: translateX(-1rem);
-    -o-transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0); } }
 
 .btn {
   position: relative;
@@ -158,6 +95,73 @@ body {
     -ms-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     z-index: -1; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.header__title {
+  font-size: 4rem;
+  letter-spacing: 0.8rem;
+  color: #fff;
+  margin-bottom: 2rem; }
+  .header__title--main, .header__title--secondary {
+    display: block; }
+  .header__title--secondary {
+    font-size: 3rem; }
+  .header__title--main {
+    animation: moveToRight 1s linear;
+    -webkit-animation: moveToRight 1s linear; }
+  .header__title--secondary {
+    animation: moveToLeft 1s linear;
+    -webkit-animation: moveToLeft 1s linear; }
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem); }
+  90% {
+    opacity: 1;
+    transform: translateX(1rem);
+    -webkit-transform: translateX(1rem);
+    -moz-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    -o-transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0); } }
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    -webkit-transform: translateX(10rem);
+    -moz-transform: translateX(10rem);
+    -ms-transform: translateX(10rem);
+    -o-transform: translateX(10rem); }
+  90% {
+    opacity: 1;
+    transform: translateX(-1rem);
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+    -ms-transform: translateX(-1rem);
+    -o-transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0); } }
 
 @keyframes moveToTop {
   0% {
