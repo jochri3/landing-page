@@ -2,6 +2,7 @@ body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   font-weight: 400;
+  padding: 3rem;
 }
 
 .header {
@@ -30,4 +31,32 @@ body {
       -webkit-animation: moveToLeft 1s linear;
     }
   }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $linearGradientStartColor,
+    $linearGradientEndColor
+  );
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2;
+  -webkit-transition: all 0.2;
+  -moz-transition: all 0.2;
+  -ms-transition: all 0.2;
+  -o-transition: all 0.2;
+
+  &:hover {
+    transform: skewY(2deg) skewX(3deg) scale(1.2);
+    -webkit-transform: skewY(2deg) skewX(3deg) scale(1.2);
+    -moz-transform: skewY(2deg) skewX(3deg) scale(1.2);
+    -ms-transform: skewY(2deg) skewX(3deg) scale(1.2);
+    -o-transform: skewY(2deg) skewX(3deg) scale(1.2);
+}
 }

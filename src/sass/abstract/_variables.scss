@@ -1,9 +1,16 @@
-$linearGradientStartColor: rgba(0, 0, 0, 0.801);
-$linearGradientEndColor: rgba(230, 93, 29, 0.698);
-$titleColor: #fff;
 $borderRadius: 2rem;
 $borderStyle: solid;
-$buttonBorderColor: black;
 $borderSize: 1px;
 $buttonTopBottomPadding: 2rem;
 $buttonRightLeftPadding: 2rem;
+
+//colors
+$linearGradientStartColor: rgba(0, 0, 0, 0.801);
+$linearGradientEndColor: rgba(230, 93, 29, 0.698);
+$titleColor: #fff;
+$buttonBorderColor: black;
+
+//grid
+$gridWith: 114rem;
+$gutterVertical: 8rem;
+$horizontalGutter: 6rem;
